@@ -68,3 +68,26 @@ Praktikum Pemograman Web 2
 ![image](https://github.com/user-attachments/assets/2974ad08-209f-4d64-9a15-2bf9ec667d57)
 -> Membuat Admin Edit Artikel
 
+![image](https://github.com/user-attachments/assets/d06224fb-5a65-45a5-b23c-649135baf894)
+-> Membuat Layout Utama
+
+![image](https://github.com/user-attachments/assets/081f2532-974a-4cfa-a4b9-9637f400c87f)
+-> Membuat Class View Cell
+
+![image](https://github.com/user-attachments/assets/261c7938-6cb3-4d90-9b0a-0029fcb930a6)
+-> Membuat View untuk View Cell
+
+Manfaat Utama dari View Layout:
+1. Meningkatkan Konsistensi Tampilan
+2. Mempermudah Pemeliharaan
+3. Mengurangi Duplikasi Kode
+4. Meningkatkan Efisiensi Pengembangan
+
+Perbedaan View Cell dan View biasa
+View Cell:
+- Digunakan untuk bagian kecil dari tampilan, seperti widget atau sidebar dinamis
+- memanggil komponen secara terpisah dari controller
+
+View Biasa:
+- Digunakan untuk menampilkan halaman secara keseluruhan
+- lebih cocok untuk menyusun halaman lengkap
