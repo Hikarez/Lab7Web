@@ -91,3 +91,9 @@ View Cell:
 View Biasa:
 - Digunakan untuk menampilkan halaman secara keseluruhan
 - lebih cocok untuk menyusun halaman lengkap
+
+![image](https://github.com/user-attachments/assets/f81d5021-6de5-4bdd-9714-a2505d655a6a)
+-> Membuat Table User
+
+![image](https://github.com/user-attachments/assets/f14450a5-9c94-49d6-a263-4deec9b9aa06)
+-> Percobaan Akses Menu Admin
