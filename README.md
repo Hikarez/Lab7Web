@@ -1,99 +1,413 @@
-# Lab7Web
-Praktikum Pemograman Web 2
+## Nama           : M Ilham Firdaus
 
-![Screenshot 2025-04-05 140413](https://github.com/user-attachments/assets/19adc134-d8b1-4812-8bec-8c582a2fd235)
--> Mengaktifkan ekstensi PHP untuk keperluan pengembangan CodeIgniter 4
+## Kelas          : TI.23.C1
 
-![image](https://github.com/user-attachments/assets/6c8343e6-eb53-4488-b671-49121ee9d5c0)
--> Folder Hasil extract dan penginstalan dengan cara manual
+## NIM            : 312310021
 
-![image](https://github.com/user-attachments/assets/e3894eab-0a64-4208-a3d3-348a784b2c0f)
--> Menjalankan CLI
+## Mata Kuliah    : Pemrograman Web 2
 
-![image](https://github.com/user-attachments/assets/6dc84c66-38df-4c6f-be8f-385a1e2ec6a5)
--> Mengaktifkan Mode Debugging untuk mengetahui jenis" error
+## Dosen Pengampu : Agung Nugroho, S.Kom., M.Kom
 
-![image](https://github.com/user-attachments/assets/662c340e-1d94-48fb-9fef-dc498b9909d9)
--> Percobaan Identifikasi Error
-
-![image](https://github.com/user-attachments/assets/5a51a5cb-e919-4f62-baec-6f0207bb453a)
--> Konfirmasi route yang ditambahkan sudah benar
-
-![image](https://github.com/user-attachments/assets/b0f44973-65c0-4e4a-af3c-2d4da6f8d923)
--> Mengakses halaman sesuai route yang dibuat
-
-![image](https://github.com/user-attachments/assets/a49a308d-8636-4e79-8387-aa927aed5f2a)
--> Membuat tampilan baru dengan file about.php pada direktori (app/view/about.php)
-
-![image](https://github.com/user-attachments/assets/22a51cd2-898b-4a92-934e-140631ebf49c)
--> Membuat file css pada direktori Public
-
-![image](https://github.com/user-attachments/assets/e91fd2c5-afc4-4b30-9fa7-25fc5a62db4a)
--> Konfigurasi tampilan template Header dan Footer pada file about.php
-
-![image](https://github.com/user-attachments/assets/ebd3b643-cb18-4c45-b708-80da7dbf7052)
--> Membuat database lab_ci4 dan table artikel
-
-![image](https://github.com/user-attachments/assets/e0c474eb-2885-4dbd-9a43-88af476a2680)
--> Konfigurasi database server pada file .env
-
-![image](https://github.com/user-attachments/assets/2f96666e-0137-44ff-94d8-5d08c60cbb5c)
--> Membuat Model Artikel
+## Universitas    : Universitas Pelita Bangsa
 
 
-![image](https://github.com/user-attachments/assets/9e135fef-31f8-4fa0-82f6-b69d81834f2c)
--> Membuat Controller Artikel
+## Hasil Praktikum 1: PHP Framework (Codeigniter)
+![xampp](img/xampp.png)
+
+![xampp](img/intl.png)
+
+![xampp](img/1.png)
+
+![xampp](img/2.png)
+
+![xampp](img/3.png)
+
+![xampp](img/4.png)
+
+![xampp](img/5.png)
+
+![xampp](img/6.png)
+
+![xampp](img/7.png)
+
+![xampp](img/8.png)
+
+## Praktikum 2: Framework Lanjutan (CRUD)
+
+![xampp](img/9.png)
+
+![xampp](img/10.png)
+
+![xampp](img/11.png)
+
+![xampp](img/12.png)
+
+![xampp](img/13.png)
+
+![xampp](img/14.png)
+
+![xampp](img/15.png)
+
+## Praktikum 3: View Layout dan View Cell
+
+![xampp](img/16.png)
+
+Penjelasan
+
+1. Manfaat View Layout: memudahkan pembuatan tampilan konsisten dan DRY (Don't Repeat Yourself).
+
+2. Perbedaan View Cell vs View biasa:
+
+  - View Biasa: hanya digunakan langsung di controller.
+
+  - View Cell: bisa digunakan berulang kali seperti komponen/modul.
+
+3. Modifikasi View Cell untuk hanya menampilkan post dengan kategori tertentu.
+
+## Praktikum 4: Login System (Modul Login - CodeIgniter 4)
+
+### 🔧 Langkah-Langkah:
+
+#### 1. Membuat Tabel `user` di Database
+Saya membuat tabel `user` dengan struktur: `id`, `username`, `useremail`, `userpassword`.
+
+**Screenshot:**
+![db_user](img/db_user.png)
+
+#### 2. Membuat Model `UserModel.php`
+Model dibuat untuk menangani data login di `app/Models/UserModel.php`.
 
 
-![image](https://github.com/user-attachments/assets/c7c2322f-742b-4e4c-b776-ba39822152a2)
--> Membuat view pada file index.php
+
+#### 3. Membuat Controller `User.php`
+Berisi method `login()`, `logout()`, dan `index()` untuk login system.
+
+**Screenshot:**
+![controller](img/user_controller.png)
+
+#### 4. Membuat View `login.php`
+Form login dibuat lebih menarik menggunakan Bootstrap.
+
+**Screenshot:**
+![login_view](img/login_view.png)
+
+#### 5. Membuat Seeder `UserSeeder.php`
+Seeder dibuat untuk mengisi data user admin menggunakan:
+`bash
+php spark db:seed UserSeeder 
+
+#### 6. Membuat Filter Auth.php
+
+Digunakan untuk melindungi halaman admin dari akses tanpa login.
 
 
-![image](https://github.com/user-attachments/assets/1b675f21-bc06-4377-bc23-ae5873995b07)
--> Menginput data ke database dan menampilkan datanya
+#### 7. Konfigurasi Routing
+Menambahkan route untuk login, logout, dan halaman admin yang dilindungi oleh filter auth.
+
+Screenshot:
+
+#### 8. Uji Login, Logout, dan Proteksi Admin
+Login berhasil akan diarahkan ke halaman admin.
+
+Logout akan menghapus session dan kembali ke login.
+
+Akses langsung ke /admin/artikel akan diarahkan ke /user/login jika belum login.
+
+## Praktikum 5: Pagination dan Pencarian
+
+### 1. Pagination
+Saya mengedit controller Artikel untuk menampilkan daftar artikel menggunakan paginate(3) dan menampilkan pagination links di view.
+
+**Screenshot:**
+![pagination](img/pagination.png)
+
+### 2. Pencarian
+Saya menambahkan fitur pencarian dengan query `q`, melakukan filter `like('judul', $q)` dan menyesuaikan tampilan form di view.
+
+**Screenshot:**
+![search](img/search.png)
+
+### 3. Uji Coba
+- Pagination muncul saat data lebih dari 3.
+- Pencarian berhasil menampilkan data yang relevan.
+
+**Screenshot:**
+![hasil](img/hasil-cari.png)
 
 
-![image](https://github.com/user-attachments/assets/53b77c3f-ad77-40f4-ba0f-6138ba4b865c)
--> Membuat Detail Artiel
+
+## Praktikum 6: Upload File Gambar
+- Menambahkan input file `gambar` di form `artikel/form_add.php`
+- Menyesuaikan tag `<form>` dengan `enctype="multipart/form-data"`
+- Mengupdate method `add()` pada `Artikel.php` untuk menyimpan file gambar ke folder `public/gambar`
+- Menyimpan nama file gambar ke database
+
+tambah artikel
+
+![hasil](img/upload.png)
+
+gambar masuk ke database
+
+![hasil](img/databaseupload.png)
 
 
-![image](https://github.com/user-attachments/assets/3f9f93fe-cf33-45fd-bad6-3749832fd3d9)
--> Membuat Dashboard Admin Artikel
+# Praktikum 7 - Relasi Tabel dan Query Builder
+
+## Deskripsi
+Modul ini membahas cara menghubungkan tabel artikel dan kategori menggunakan relasi One-to-Many di CodeIgniter 4, serta memanfaatkan Query Builder.
+
+## Fitur
+- Relasi One-to-Many antara artikel dan kategori.
+- Tambah/Edit/Hapus artikel dengan pemilihan kategori.
+- Tampilan daftar artikel dengan kategori.
+- Filter dan pencarian artikel berdasarkan kategori.
+
+## Screenshots
+### Tampilan Daftar Artikel (Admin)
+![admin_index](img/admin_index.png)
+
+### Tambah Artikel
+![form_add](img/form_add.png)
+
+### Edit Artikel
+![form_edit](img/form_edit.png)
+
+### Tampilan Artikel di Halaman Depan
+![index](img/index.png)
+
+## Langkah Pengerjaan
+1. Membuat tabel `kategori`
+2. Menambahkan foreign key di tabel `artikel`
+3. Membuat `KategoriModel`
+4. Modifikasi `ArtikelModel` dan `Artikel Controller`
+5. Modifikasi semua view
+6. Testing fungsi: tambah, edit, hapus, filter artikel
 
 
-![image](https://github.com/user-attachments/assets/5a9fb430-7884-4dc9-bd03-bd672c3d422d)
--> Membuat Admin Tambah Artikel
+# Praktikum 8 - AJAX dengan CodeIgniter 4
+
+Modul ini membahas penggunaan AJAX untuk menampilkan dan menghapus data artikel tanpa reload halaman.
+
+## 🚀 Fitur
+- Menampilkan daftar artikel menggunakan AJAX
+- Menghapus data artikel tanpa reload
+- Mengedit data artikel tanpa reload
+- Menggunakan jQuery sebagai library
+- Menambahkan data artikel tanpa reload
+
+## 📁 Struktur
+- Controller: `AjaxController`
+- View: `app/Views/ajax/index.php`
+- Model: `ArtikelModel`
+- jQuery: `public/assets/js/jquery-3.6.0.min.js`
+
+## 📸 Screenshot
+### Tabel Data Artikel
+![screenshot](img/ajax_table.png)
+
+### Tombol Delete AJAX
+![screenshot](img/delete_ajax.png)
+
+### Tombol Edit AJAX
+![screenshot](img/edit.png)
+
+### Tombol +Tambah Artikel AJAX
+![screenshot](img/+TambahArtikel.png)
 
 
-![image](https://github.com/user-attachments/assets/2974ad08-209f-4d64-9a15-2bf9ec667d57)
--> Membuat Admin Edit Artikel
+# Modul 9 – AJAX Pagination & Search
 
-![image](https://github.com/user-attachments/assets/d06224fb-5a65-45a5-b23c-649135baf894)
--> Membuat Layout Utama
+## 🎯 Tujuan Praktikum
 
-![image](https://github.com/user-attachments/assets/081f2532-974a-4cfa-a4b9-9637f400c87f)
--> Membuat Class View Cell
+- Menerapkan pencarian dan pagination dinamis menggunakan AJAX
+- Meningkatkan UX aplikasi dengan tampilan real-time dan interaktif
+- Menggunakan jQuery untuk permintaan data backend di CodeIgniter 4
 
-![image](https://github.com/user-attachments/assets/261c7938-6cb3-4d90-9b0a-0029fcb930a6)
--> Membuat View untuk View Cell
+---
 
-Manfaat Utama dari View Layout:
-1. Meningkatkan Konsistensi Tampilan
-2. Mempermudah Pemeliharaan
-3. Mengurangi Duplikasi Kode
-4. Meningkatkan Efisiensi Pengembangan
+## 🔧 Teknologi
 
-Perbedaan View Cell dan View biasa
-View Cell:
-- Digunakan untuk bagian kecil dari tampilan, seperti widget atau sidebar dinamis
-- memanggil komponen secara terpisah dari controller
+- CodeIgniter 4
+- Bootstrap 5
+- jQuery 3.6+
 
-View Biasa:
-- Digunakan untuk menampilkan halaman secara keseluruhan
-- lebih cocok untuk menyusun halaman lengkap
+---
 
-![image](https://github.com/user-attachments/assets/f81d5021-6de5-4bdd-9714-a2505d655a6a)
--> Membuat Table User
+## 🛠️ Langkah Pengerjaan
 
-![image](https://github.com/user-attachments/assets/f14450a5-9c94-49d6-a263-4deec9b9aa06)
--> Percobaan Akses Menu Admin
+1. Modifikasi `admin_index()` pada controller `Artikel` untuk mendukung AJAX
+2. Ubah `admin_index.php`:
+   - Tambahkan form pencarian dan filter kategori
+   - Tampilkan data artikel dan pagination dengan jQuery
+3. Tambahkan indikator loading saat request
+4. AJAX otomatis fetch data saat search dan filter berubah
+
+---
+
+## 🧪 Fitur yang Dibuat
+
+| Fitur          | Status |
+|----------------|--------|
+| AJAX Search    | ✅     |
+| AJAX Pagination| ✅     |
+| Loading State  | ✅     |
+| Kategori Filter| ✅     |
+
+---
+
+## 📸 Tampilan
+
+| 1️⃣ | Tampilan awal halaman admin | Setelah membuka `/admin/artikel` |
+![screenshot](img/admin_artikel.png)
+| 2️⃣ | Setelah melakukan pencarian | Isi kolom search, klik "Cari" |
+![screenshot](img/cari.png)
+| 3️⃣ | Filter kategori aktif | Pilih kategori tertentu |
+![screenshot](img/kategori_artikel.png)
+| 4️⃣ | Pagination AJAX berhasil | Klik halaman 2, data berubah tanpa reload |
+![screenshot](img/pagination_klik.png)
+---
+
+
+# Praktikum 10 - Membuat REST API dengan CodeIgniter 4
+
+Modul ini membahas bagaimana membuat RESTful API menggunakan CodeIgniter 4. Fokus utama adalah mengakses data artikel menggunakan metode HTTP seperti GET, POST, PUT, dan DELETE.
+
+## 🧱 Langkah-langkah Praktikum
+
+## 🔧 1. Persiapan
+Buka kembali folder project sebelumnya lab7_php_ci di htdocs (XAMPP).
+
+Jalankan server lokal dan pastikan URL http://localhost:8080 bisa diakses.
+
+📸 Screenshot tampilan awal project
+![screenshot](img/hasil_api_delete.png)
+
+## 📦 2. Install Postman
+
+Unduh Postman dari https://www.postman.com/downloads/
+
+Gunakan untuk menguji endpoint API.
+
+📸 Screenshot aplikasi Postman
+![screenshot](img/postman.png)
+
+## 🛠 3. Membuat Controller RESTful PostApi.php
+
+Lokasi: app/Controllers/PostApi.php
+
+
+// lihat kode lengkap di file PostApi.php
+📸 Screenshot file controller PostApi.php di VSCode
+![screenshot](img/hasil_api_delete.png)
+
+## 🧭 4. Tambahkan Routing API
+
+Edit file app/Config/Routes.php:
+tambahkan 
+
+ $routes->resource('post', ['controller' => 'PostApi']);
+
+📸 Screenshot baris kode routes
+![screenshot](img/controler_api_post.png)
+
+## 🧪 5. Uji Endpoint dengan Postman
+
+✅ a. GET – Menampilkan Semua Data
+Method: GET
+
+URL: http://localhost:8080/post
+
+📸 Screenshot hasil GET semua data di Postman
+![screenshot](img/api_get.png)
+
+Hasil
+![screenshot](img/hasil_api_get.png)
+
+✅ b. POST – Menambahkan Data
+Method: POST
+
+Body (x-www-form-urlencoded):
+
+judul: Ini dari Postman
+
+isi: ini berhasil
+
+📸 Screenshot hasil POST di Postman
+![screenshot](img/api_post.png)
+
+Hasil
+![screenshot](img/hasil_api_post.png)
+
+✅ c. PUT – Mengubah Data
+Method: PUT
+
+URL: http://localhost:8080/postapi/1
+
+Body (raw, JSON):
+
+json
+Salin
+Edit
+{
+  "judul": "Ini dari postman gas",
+  "isi": "ini berhasil"
+}
+
+atau
+
+Body (x-www-form-urlencoded):
+
+judul: Ini dari postman gas
+
+isi: ini berhasil
+
+Header:
+
+Content-Type: application/json
+
+📸 Screenshot hasil PUT di Postman
+![screenshot](img/api_put.png)
+
+
+hasil
+![screenshot](img/hasil_api_put.png)
+
+✅ d. DELETE – Menghapus Data
+Method: DELETE
+
+URL: http://localhost:8080/postapi/1
+
+📸 Screenshot hasil DELETE di Postman
+![screenshot](img/api_delete.png)
+
+Hasil
+![screenshot](img/hasil_api_delete.png)
+
+## 🧾 Kesimpulan
+REST API mempermudah integrasi backend dan frontend.
+
+CodeIgniter 4 menyediakan ResourceController untuk membangun API dengan cepat.
+
+Penggunaan Postman sangat membantu dalam proses pengujian endpoint HTTP.
+
+Format JSON disarankan untuk komunikasi data antar aplikasi.
+
+# 🌐 Web Portal Berita — UI/UX Update ✨
+
+## 🔄 Pembaruan Terbaru
+
+Artikel
+![screenshot](img/artikel_update.png)
+
+Admin Artikel
+![screenshot](img/admin_artikel_update.png)
+
+Home
+![screenshot](img/home.png)
+
+contact
+![screenshot](img/contact.png)
+
+contact
+![screenshot](img/about.png)
+
