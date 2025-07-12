@@ -1,13 +1,8 @@
-## Nama           : M Ilham Firdaus
-
+## Nama           : Reza Fadlillah Ardi
+## NIM            : 312310032
 ## Kelas          : TI.23.C1
-
-## NIM            : 312310021
-
 ## Mata Kuliah    : Pemrograman Web 2
-
 ## Dosen Pengampu : Agung Nugroho, S.Kom., M.Kom
-
 ## Universitas    : Universitas Pelita Bangsa
 
 
